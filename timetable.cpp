@@ -24,7 +24,7 @@ int main(){
     int first = 0;
     int second = 0;
     char colon;
-    cout << "演奏の開始時刻を入力してください。"
+    cout << "演奏の開始時刻を入力してください。";
     cin >> first >> colon >> second;
     timetable(first, second);
     return 0;
