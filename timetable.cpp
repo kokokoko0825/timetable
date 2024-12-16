@@ -35,6 +35,23 @@ void rehatable(int &hour, int &minuit, ofstream &outfile, int band, int rehatime
     }
 };
 
+void opentime(int &hour, int &minuit, ofstream &outfile, int befor_open, int after_open){
+    minuit += befor_open;
+    if (minuit >= 60){
+        hour += 1;
+        minuit -= 60;
+    }
+    if(befor_open != 0){
+        outfile << "|" << setw(2) << setfill('0') << hour << ":" << setw(2) << setfill('0') << minuit << "| OPEN |" << endl;
+    }
+
+    minuit += after_open;
+    if(minuit >= 60){
+        hour += 1;
+        minuit -= 60;
+    }
+};
+
 void timetable(int hour, int minuit, ofstream &outfile, int band, int bandtime, int changetime){
     outfile << "|" << setw(2) << setfill('0') << hour << ":" << setw(2) << setfill('0') << minuit << "| ライブ START |" << endl;
     outfile << "|" << setw(2) << setfill('0') << hour << ":" << setw(2) << setfill('0') << minuit ;
@@ -59,7 +76,7 @@ void timetable(int hour, int minuit, ofstream &outfile, int band, int bandtime, 
         }
 
         if(i == band-1){
-            outfile << "|" << "終了" << "|" << endl;
+            outfile << "|" << "完パケ" << "|" << endl;
         }
     }
 };
@@ -71,7 +88,9 @@ int main(){
     char colon;
     int band = 8;  //バンド数によって変更
     int rehatime = 30; //リハの時間に合わせて変更
-    int rehachangetime = 15; //リハの転換時間に合わせて変更
+    int rehachangetime = 0; //リハの転換時間に合わせて変更
+    int befor_open = 30; //リハ終了から開場までの時間 
+    int after_open = 30; //開場からライブ開始までの時間
     int bandtime = 30; //ライブ時間に合わせて変更
     int changetime = 15; //転換時間に合わせて変更
     cout << "演奏の開始時刻を入力してください。ex.(HH:MM) ->";
@@ -82,6 +101,7 @@ int main(){
         return 1;
     }
     rehatable(hour, minuit, outfile, band, rehatime, rehachangetime);
+    opentime(hour, minuit, outfile, befor_open, after_open);
     timetable(hour, minuit, outfile, band, bandtime, changetime);
     outfile.close();
     return 0;
