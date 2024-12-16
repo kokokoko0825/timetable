@@ -27,7 +27,7 @@ function generateTimetable(hour, minuit, band, rehatime, rehachangetime, befor_o
                 hour += 1;
                 minuit -= 60;
             }
-            output += `<tr><td>${startHour.toString().padStart(2, '0')}:${startMinuit.toString().padStart(2, '0')} ~ ${hour.toString().padStart(2, '0')}:${minuit.toString().padStart(2, '0')}</td><td>バンド${i} リハ</td></tr>`;
+            output += `<tr><td>${startHour.toString().padStart(2, '0')}:${startMinuit.toString().padStart(2, '0')} ~ ${hour.toString().padStart(2, '0')}:${minuit.toString().padStart(2, '0')}</td><td><input type="text" value="バンド${i} リハ"></td></tr>`;
             if (i != 1) {
                 const changeStartHour = hour;
                 const changeStartMinuit = minuit;
@@ -70,7 +70,7 @@ function generateTimetable(hour, minuit, band, rehatime, rehachangetime, befor_o
             hour += 1;
             minuit -= 60;
         }
-        output += `<tr><td>${bandStartHour.toString().padStart(2, '0')}:${bandStartMinuit.toString().padStart(2, '0')} ~ ${hour.toString().padStart(2, '0')}:${minuit.toString().padStart(2, '0')}</td><td>バンド${i + 1}</td></tr>`;
+        output += `<tr><td>${bandStartHour.toString().padStart(2, '0')}:${bandStartMinuit.toString().padStart(2, '0')} ~ ${hour.toString().padStart(2, '0')}:${minuit.toString().padStart(2, '0')}</td><td><input type="text" value="バンド${i + 1}"></td></tr>`;
         const changeStartHour = hour;
         const changeStartMinuit = minuit;
         minuit += changetime;
