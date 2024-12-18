@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    gap: 21px;
+    background: #FFF;
+    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.icon {
+    width: 150px;
+    height: 150px;
+}
+
+.headText {
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bodys {
+    display: flex;
+    width: 1440px;
+    height: 874px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.inputFrame {
+    display: flex;
+    width: 50%;
+    height: 874px;
+    flex-shrink: 0;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.timetableform {
+    display: table;
+}
+
+.textFrame {
+    display: table-row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-right: 80px;
+    padding-left: 64px;
+
+}
+
+.label {
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input {
+    width: 260px;
+    height: 47px;
+
+}
+
+.button {
+    width: 356px;
+    height: 116px;
+    border-radius: 20px;
+    background: #FF783F;
+    margin-top: 30px;
+    margin-left: 180px;
+}
+
+.buttonText {
+    color: #FFF;
+    font-family: "Inria Serif";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.outputFrame{
+    display: flex;
+    width: 50%;
+    height: 874px;
+    flex-direction: column;
+}
+
+.outputText{
+    color: #000;
+    font-family: "Inria Serif";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 30px;
+    padding-left: 13px;
+}
