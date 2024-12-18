@@ -22,7 +22,7 @@ th {
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 100%;
+    width: auto;
     height: 9.375rem;
     gap: 1.3125rem;
     background: #FFF;
@@ -94,6 +94,7 @@ th {
     height: 2.9375rem;
     padding-left: 16px;
     border-radius: 0.625rem;
+    font-size: 1.25rem;
     
 
 }
@@ -136,7 +137,7 @@ th {
     padding-left: 0.8125rem;
 }
 
-@media screen and (max-width: 1220px){
+@media screen and (max-width: 1240px){
     .bodys {
         flex-direction: column;
     }
