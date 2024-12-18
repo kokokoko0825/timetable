@@ -155,3 +155,9 @@ th {
         height: auto;
     }
 }
+
+@media screen and (max-width: 720px){
+    .header {
+        width: 720px;
+    }
+}
