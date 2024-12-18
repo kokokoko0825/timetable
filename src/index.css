@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
     font-family: Inria Serif;
 }
@@ -94,7 +96,7 @@ th {
     height: 2.9375rem;
     padding-left: 16px;
     border-radius: 0.625rem;
-    font-size: 1.25rem;
+    font-size: 1.80rem;
     
 
 }
@@ -138,6 +140,9 @@ th {
 }
 
 @media screen and (max-width: 1240px){
+    .input {
+        font-size: 2.25rem;
+    }
     .bodys {
         flex-direction: column;
     }
