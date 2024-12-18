@@ -73,7 +73,7 @@ th {
 .textFrame {
     display: flex;
     justify-content: space-between;
-    width: 556px;
+    width: 650px;
     height: auto;
     align-items: center;
     padding-top: 1.5625rem;
