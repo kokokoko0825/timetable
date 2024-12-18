@@ -1,4 +1,7 @@
-document.getElementById('timetableForm').addEventListener('submit', function(event) {
+import "./index.css"
+import "./images/tablemate-icon-v-31.png"
+
+document.getElementById('timetableForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const startTime = document.getElementById('startTime').value;
@@ -87,3 +90,5 @@ function generateTimetable(hour, minuit, band, rehatime, rehachangetime, befor_o
     output += "</table>";
     return output;
 }
+
+// <h4>！注意！ すべて半角でお願いします。また開始時刻に関しては" : "の記入を忘れないでください。</h4>
