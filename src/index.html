@@ -1,70 +1,95 @@
 <!DOCTYPE html>
 <html lang="ja">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TableMate</title>
+  <link href="index.css" rel="stylesheet" />
+ </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TableMate</title>
-    <link href="index.css" rel="stylesheet" />
-</head>
-
-<body>
-    <header>
-        <div class="header">
-            <div class="icon"><img src="./images/tablemate-icon-v-31.png"></div>
-            <div class="headText">
-                TableMate
-            </div>
+ <body>
+  <header>
+   <div class="header">
+    <div class="title">
+    <div class="icon"><img src="./images/tablemate-icon-v-31.png" /></div>
+    <div class="headText">
+     <a href="https://timetable-2y9.pages.dev/">TableMate</a>
+    </div>
+    </div>
+    <div class="subtitle">
+        <a href="mailto:tabletime446@gmail.com" target="_blank">
+            <div class="mailText">お問い合わせ</div>
+        </a>
+    </div>
+   </div>
+  </header>
+  <feature>
+   <div class="bodys">
+    <div class="inputFrame">
+     <form class="timetableForm" id="timetableForm">
+      <div class="textFrame">
+       <label class="label" for="startTime">開始時刻 (HH:MM)</label>
+       <input
+        class="input"
+        placeholder="ex) 14:05"
+        type="text"
+        id="startTime"
+        required
+       /><br />
+      </div>
+      <div class="textFrame">
+       <label class="label" for="band">バンド数</label>
+       <input class="input" type="number" id="band" required /><br />
+      </div>
+      <div class="textFrame">
+       <label class="label" for="rehatime">リハの演奏時間 (分)</label>
+       <input class="input" type="number" id="rehatime" required /><br />
+      </div>
+      <div class="textFrame">
+       <label class="label" for="rehachangetime">リハの転換時間 (分)</label>
+       <input class="input" type="number" id="rehachangetime" required /><br />
+      </div>
+      <div class="textFrame">
+       <label class="label" for="befor_open"
+        >リハ終了から開場までの時間 (分)</label
+       >
+       <input class="input" type="number" id="befor_open" required /><br />
+      </div>
+      <div class="textFrame">
+       <label class="label" for="after_open"
+        >開場からライブ開始までの時間 (分)</label
+       >
+       <input class="input" type="number" id="after_open" required /><br />
+      </div>
+      <div class="textFrame">
+       <label class="label" for="bandtime">演奏時間 (分)</label>
+       <input class="input" type="number" id="bandtime" required /><br />
+      </div>
+      <div class="textFrame">
+       <label class="label" for="changetime">転換時間 (分)</label>
+       <input class="input" type="number" id="changetime" required /><br />
+      </div>
+      <button class="button" type="submit">
+       <div class="buttonText">これで作る！</div>
+      </button>
+     </form>
+    </div>
+    <div class="outputFrame">
+     <div class="outputText">TimeTable</div>
+     <div class="text-container" id="preview"></div>
+    </div>
+   </div>
+  </feature>
+  <script src="index.js"></script>
+  <footer>
+   <div class="footer">
+    <div class="footerTextFrame">
+        <div class="footerText">
+            <a href="https://github.com/kokokoko0825/timetable">ソースコード</a>
         </div>
-    </header>
-    <feature>
-        <div class="bodys">
-            <div class="inputFrame">
-                <form class="timetableForm" id="timetableForm">
-                    <div class="textFrame">
-                        <label class="label" for="startTime">開始時刻 (HH:MM)</label>
-                        <input class="input" placeholder="ex) 14:05" type="text" id="startTime" required><br>
-                    </div>
-                    <div class="textFrame">
-                        <label class="label" for="band">バンド数</label>
-                        <input class="input" type="number" id="band" required><br>
-                    </div>
-                    <div class="textFrame">
-                        <label class="label" for="rehatime">リハの演奏時間 (分)</label>
-                        <input class="input" type="number" id="rehatime" required><br>
-                    </div>
-                    <div class="textFrame">
-                        <label class="label" for="rehachangetime">リハの転換時間 (分)</label>
-                        <input class="input" type="number" id="rehachangetime" required><br>
-                    </div>
-                    <div class="textFrame">
-                        <label class="label" for="befor_open">リハ終了から開場までの時間 (分)</label>
-                        <input class="input" type="number" id="befor_open" required><br>
-                    </div>
-                    <div class="textFrame">
-                        <label class="label" for="after_open">開場からライブ開始までの時間 (分)</label>
-                        <input class="input" type="number" id="after_open" required><br>
-                    </div>
-                    <div class="textFrame">
-                        <label class="label" for="bandtime">演奏時間 (分)</label>
-                        <input class="input" type="number" id="bandtime" required><br>
-                    </div>
-                    <div class="textFrame">
-                        <label class="label" for="changetime">転換時間 (分)</label>
-                        <input class="input" type="number" id="changetime" required><br>
-                    </div>
-                    <button class="button" type="submit">
-                        <div class="buttonText">これで作る！</div>
-                    </button>
-                </form>
-            </div>
-            <div class="outputFrame">
-                <div class="outputText">TimeTable</div>
-                <div class="text-container" id="preview"></div>
-            </div>
-        </div>
-    </feature>
-    <script src="index.js"></script>
-</body>
-
+        <div class="copyRight">© 2024 kokokoko0825</div>
+    </div>
+   </div>
+  </footer>
+ </body>
 </html>
