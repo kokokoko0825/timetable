@@ -120,16 +120,16 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    flex: 1;
 }
 
 .input {
     width: 16.25rem;
     height: 2.9375rem;
-    padding-left: 16px;
+    padding-left: 1rem;
     border-radius: 0.625rem;
     font-size: 1.50rem;
-    
-
+    flex: 1;
 }
 
 .button {
